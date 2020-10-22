@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import json
+import traceback
 
 parks_url = "https://www.dnr.state.mn.us"
 
@@ -39,7 +40,11 @@ for link in soup.select(".list a"):
             text
             for text in soup_page.select_one("#park .row .col-sm-8 p").stripped_strings
         ]
-        address = f"{text_list[0]} {text_list[1]}"
+        try:
+            address = f"{text_list[0]} {text_list[1]}"
+        except:
+            address = ""
+            pass
         lat_long = (
             soup_page.select_one("#park .row .col-sm-8 small")
             .a.next_sibling.next_sibling.get("href")
@@ -58,8 +63,9 @@ for link in soup.select(".list a"):
                 images=images,
             )
         )
-    except Exception as e:
-        print(f"Current page: {url}, {e}")
+    except:
+        traceback.print_exc()
+        print(f"Caused by this page: {url}")
         continue
 
 driver.close()
