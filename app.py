@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request
 from dotenv import load_dotenv
+from flask_sqlalchemy import SQLAlchemy
 import os
 
 # Load environment variables
 load_dotenv()
 
 app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///state_parks"
+db = SQLAlchemy(app)
 
 
 @app.route("/map")
