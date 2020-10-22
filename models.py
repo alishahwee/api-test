@@ -13,7 +13,8 @@ parks_table = Table(
     meta,
     Column("id", Integer, primary_key=True),
     Column("name", String, nullable=False),
-    Column("address", String, nullable=False),
+    Column("address", String),
+    Column("coordinates", String, nullable=False),
     Column("url", String, nullable=False),
 )
 
@@ -41,11 +42,14 @@ def insert_parks(json_file):
         for park in parks:
             name = park["name"]
             address = park["address"]
+            coordinates = park["lat_long"]
             activities = park["activities"]
             url = park["url"]
             images = park["images"]
 
-            ins = parks_table.insert().values(name=name, address=address, url=url)
+            ins = parks_table.insert().values(
+                name=name, address=address, coordinates=coordinates, url=url
+            )
             parks_id = db.execute(ins).inserted_primary_key[0]
             db.execute(
                 images_table.insert(),
