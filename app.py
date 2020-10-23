@@ -8,6 +8,8 @@ load_dotenv()
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///state_parks"
+app.config["SQLALCHEMY_ECHO"] = True
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
 
@@ -15,7 +17,23 @@ db = SQLAlchemy(app)
 def map():
     """Render mapbox map."""
 
-    return render_template("map.html", token=os.environ.get("MAPBOX_TOKEN"))
+    parks_id = request.args.get("id")
+
+    QUERY = """
+    SELECT name, coordinates
+    FROM parks
+    WHERE id = :id
+    """
+
+    name, coords = db.session.execute(QUERY, {"id": parks_id}).fetchone()
+
+    coords = [float(c) for c in coords.split(",")]
+
+    coords.reverse()
+
+    return render_template(
+        "map.html", token=os.environ.get("MAPBOX_TOKEN"), name=name, coords=coords
+    )
 
 
 @app.route("/campgrounds")
