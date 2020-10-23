@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from dotenv import load_dotenv
 from flask_sqlalchemy import SQLAlchemy
 import os
@@ -36,8 +36,34 @@ def map():
     )
 
 
-@app.route("/campgrounds")
+@app.route("/", methods=["GET", "POST"])
 def campgrounds():
     """Returns a list of campgrounds."""
 
-    return render_template("campgrounds.html")
+    QUERY = """
+    SELECT name
+    FROM parks
+    ORDER BY 1
+    """
+
+    names = db.session.execute(QUERY).fetchall()
+
+    return render_template("campgrounds.html", names=names)
+
+
+@app.route("/search")
+def search():
+    name = request.args.get("pname")
+
+    name = f"%{name.lower()}%"
+
+    QUERY = """
+    SELECT id
+    FROM parks
+    WHERE LOWER(name)
+    LIKE :name
+    """
+
+    parks_id = db.session.execute(QUERY, {"name": name}).fetchone()
+
+    return redirect(f"/map?id={parks_id[0]}")

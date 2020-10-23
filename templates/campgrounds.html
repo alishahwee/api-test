@@ -6,9 +6,14 @@
     <title>Campgrounds</title>
 </head>
 <body>
-    <form action="/campgrounds" method="get">
+    <form action="/search" method="get">
         <label for="campground-search">Search for a campground:</label>
-        <input type="search" name="pname" id="campground-search">
+        <input list="parks" type="search" name="pname" id="campground-search" autocomplete="off">
+        <datalist id="parks">
+            {% for name in names %}
+                <option value="{{ name[0] }}">
+            {% endfor %}
+        </datalist>
         <button>Search</button>
     </form>
 </body>
