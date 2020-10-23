@@ -41,7 +41,7 @@ for link in soup.select(".list a"):
             for text in soup_page.select_one("#park .row .col-sm-8 p").stripped_strings
         ]
         try:
-            address = f"{text_list[0]} {text_list[1]}"
+            address = f"{text_list[0]}, {text_list[1]}"
         except:
             address = ""
             pass
