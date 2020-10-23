@@ -602,6 +602,12 @@ COPY public.images (parks_id, url) FROM stdin;
 20	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00163_005.jpg
 20	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00163_006.jpg
 21	https://images.dnr.state.mn.us/destinations/state_parks/banners/spk00166.jpg
+21	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00166_001.jpg
+21	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00166_002.jpg
+21	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00166_003.jpg
+21	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00166_004.jpg
+21	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00166_005.jpg
+21	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00166_006.jpg
 22	https://images.dnr.state.mn.us/destinations/state_parks/banners/spk00167.jpg
 22	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00167_007.jpg
 22	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00167_008.jpg
@@ -896,6 +902,12 @@ COPY public.images (parks_id, url) FROM stdin;
 63	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00280_005.jpg
 63	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00280_006.jpg
 64	https://images.dnr.state.mn.us/destinations/state_parks/banners/spk00254.jpg
+64	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00254_001.jpg
+64	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00254_002.jpg
+64	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00254_003.jpg
+64	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00254_004.jpg
+64	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00254_005.jpg
+64	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00254_006.jpg
 65	https://images.dnr.state.mn.us/destinations/state_parks/banners/spk00283.jpg
 65	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00283_001.jpg
 65	https://images.dnr.state.mn.us/destinations/state_parks/1_large/SPK00283_002.jpg
@@ -918,72 +930,72 @@ COPY public.images (parks_id, url) FROM stdin;
 --
 
 COPY public.parks (id, name, address, coordinates, url) FROM stdin;
-1	Afton State Park	6959 Peller Avenue South Hastings, MN 55033	44.847822,-92.797608	https://www.dnr.state.mn.us/state_parks/afton/index.html
-2	Banning State Park	P.O. Box 643 Sandstone, MN 55072	46.179636,-92.848759	https://www.dnr.state.mn.us/state_parks/banning/index.html
-3	Bear Head Lake State Park	9301 Bear Head State Park Road Ely, MN 55731	47.819641,-92.047706	https://www.dnr.state.mn.us/state_parks/bear_head_lake/index.html
-4	Beaver Creek Valley State Park	15954 County 1 Caledonia, MN 55921	43.645962,-91.555023	https://www.dnr.state.mn.us/state_parks/beaver_creek_valley/index.html
-5	Big Stone Lake State Park	35889 Meadowbrook State Park Road Ortonville, MN 56278	45.391608,-96.53036	https://www.dnr.state.mn.us/state_parks/big_stone_lake/index.html
-6	Blue Mounds State Park	1410 161st Street Luverne, MN 56156	43.7177,-96.192638	https://www.dnr.state.mn.us/state_parks/blue_mounds/index.html
-7	Buffalo River State Park	565 155th Street South Glyndon, MN 56547	46.872839,-96.474624	https://www.dnr.state.mn.us/state_parks/buffalo_river/index.html
-8	Camden State Park	1897 Camden Park Road Lynd, MN 56157	44.355699,-95.918122	https://www.dnr.state.mn.us/state_parks/camden/index.html
-9	Carley State Park	c/o Whitewater State Park 19041 Hwy 74	44.109915,-92.169425	https://www.dnr.state.mn.us/state_parks/carley/index.html
-10	Cascade River State Park	3481 West Highway 61 Lutsen, MN 55612	47.710959,-90.505919	https://www.dnr.state.mn.us/state_parks/cascade_river/index.html
-11	Charles A. Lindbergh State Park	1615 Lindbergh Drive South Little Falls, MN 56345	45.958857,-94.388152	https://www.dnr.state.mn.us/state_parks/charles_a_lindbergh/index.html
-12	Crow Wing State Park	3124 State Park Road Brainerd, MN 56401	46.264153,-94.318974	https://www.dnr.state.mn.us/state_parks/crow_wing/index.html
-13	Father Hennepin State Park	Mailing P.O. Box 397	46.138048,-93.480541	https://www.dnr.state.mn.us/state_parks/father_hennepin/index.html
-14	Flandrau State Park	1300 Summit Avenue New Ulm, MN 56073	44.294231,-94.459411	https://www.dnr.state.mn.us/state_parks/flandrau/index.html
-15	Forestville Mystery Cave State Park	21071 County 118 Preston, MN 55965	43.633664,-92.230635	https://www.dnr.state.mn.us/state_parks/forestville_mystery_cave/index.html
-16	Fort Ridgely State Park	72158 County Road 30 Fairfax, MN 55332	44.447905,-94.726687	https://www.dnr.state.mn.us/state_parks/fort_ridgely/index.html
-17	Fort Snelling State Park	101 Snelling Lake Road St. Paul, MN 55111	44.871366,-93.195991	https://www.dnr.state.mn.us/state_parks/fort_snelling/index.html
-18	Franz Jevne State Park	State Highway 11 Birchdale, MN 56629	48.641689,-94.058496	https://www.dnr.state.mn.us/state_parks/franz_jevne/index.html
-19	Frontenac State Park	29223 County 28 Boulevard Frontenac, MN 55026	44.521833,-92.343275	https://www.dnr.state.mn.us/state_parks/frontenac/index.html
-20	George H. Crosby Manitou State Park	Send mail c/o Tettegouche State Park 5702 Highway 61	47.479452,-91.123011	https://www.dnr.state.mn.us/state_parks/george_crosby_manitou/index.html
-21	Glacial Lakes State Park	25022 County Road 41 Starbuck, MN 56381	45.54167,-95.533468	https://www.dnr.state.mn.us/state_parks/glacial_lakes/index.html
-22	Glendalough State Park	24869 Whitetail Lane Battle Lake, MN 56515	46.311447,-95.67996	https://www.dnr.state.mn.us/state_parks/glendalough/index.html
-23	Gooseberry Falls State Park	3206 Highway 61 East Two Harbors, MN 55616	47.13986,-91.47335	https://www.dnr.state.mn.us/state_parks/gooseberry_falls/index.html
-24	Grand Portage State Park	9393 East Highway 61 Grand Portage, MN 55605	47.998931,-89.59363	https://www.dnr.state.mn.us/state_parks/grand_portage/index.html
-25	Great River Bluffs State Park	43605 Kipp Drive Winona, MN 55987	43.937272,-91.429388	https://www.dnr.state.mn.us/state_parks/great_river_bluffs/index.html
-26	Hayes Lake State Park	48990 County Road 4 Roseau, MN 56751	48.643872,-95.545248	https://www.dnr.state.mn.us/state_parks/hayes_lake/index.html
-27	Hill-Annex Mine State Park	Hill Annex Mine State Park C/O Scenic State Park	47.325852,-93.277504	https://www.dnr.state.mn.us/state_parks/hill_annex_mine/index.html
-28	Interstate State Park	PO Box 254 307 Milltown Road	45.394917,-92.667836	https://www.dnr.state.mn.us/state_parks/interstate/index.html
-29	Itasca State Park	36750 Main Park Drive Park Rapids, MN 56470	47.250031,-95.212237	https://www.dnr.state.mn.us/state_parks/itasca/index.html
-30	Jay Cooke State Park	780 Highway 210 Carlton, MN 55718	46.661595,-92.399082	https://www.dnr.state.mn.us/state_parks/jay_cooke/index.html
-31	John A. Latsch State Park	c/o Whitewater State Park 19041 Highway 74	44.172549,-91.838344	https://www.dnr.state.mn.us/state_parks/john_latsch/index.html
-32	Judge C. R. Magney State Park	4051 East Highway 61 Grand Marais, MN 55604	47.817415,-90.053747	https://www.dnr.state.mn.us/state_parks/judge_cr_magney/index.html
-33	Kilen Woods State Park		43.732178,-95.068799	https://www.dnr.state.mn.us/state_parks/kilen_woods/index.html
-34	Lac Qui Parle State Park	14047 20th Street Northwest Watson, MN 56295	45.021109,-95.894069	https://www.dnr.state.mn.us/state_parks/lac_qui_parle/index.html
-35	Lake Bemidji State Park	3401 State Park Road Northeast Bemidji, MN 56601	47.540636,-94.835799	https://www.dnr.state.mn.us/state_parks/lake_bemidji/index.html
-36	Lake Bronson State Park	3793 230th St Box 9	48.731464,-96.634675	https://www.dnr.state.mn.us/state_parks/lake_bronson/index.html
-37	Lake Carlos State Park	2601 County Road 38 Northeast Carlos, MN 56319	46.000442,-95.332947	https://www.dnr.state.mn.us/state_parks/lake_carlos/index.html
-38	Lake Louise State Park	c/o Forestville/Mystery Cave State Park: 21071 County 118 Preston, MN 55965	43.535955,-92.509176	https://www.dnr.state.mn.us/state_parks/lake_louise/index.html
-39	Lake Maria State Park	11411 Clementa Avenue Northwest Monticello, MN 55362	45.317411,-93.931667	https://www.dnr.state.mn.us/state_parks/lake_maria/index.html
-40	Lake Shetek State Park	163 State Park Road Currie, MN 56123	44.094789,-95.6808	https://www.dnr.state.mn.us/state_parks/lake_shetek/index.html
-41	Lake Vermilion-Soudan Underground Mine State Park		47.816696,-92.248857	https://www.dnr.state.mn.us/state_parks/lake_vermilion_soudan/index.html
-42	McCarthy Beach State Park	7622 McCarthy Beach Road Side Lake, MN 55781	47.6689,-93.031541	https://www.dnr.state.mn.us/state_parks/mccarthy_beach/index.html
-43	Maplewood State Park	39721 Park Entrance Road Pelican Rapids, MN 56572	46.549975,-95.954175	https://www.dnr.state.mn.us/state_parks/maplewood/index.html
-44	Mille Lacs Kathio State Park	15066 Kathio State Park Road Onamia, MN 56359	46.135411,-93.724473	https://www.dnr.state.mn.us/state_parks/mille_lacs_kathio/index.html
-45	Minneopa State Park	54497 Gadwall Road Mankato, MN 56001	44.156337,-94.091356	https://www.dnr.state.mn.us/state_parks/minneopa/index.html
-46	Monson Lake State Park	1690 15th Street Northeast Sunburg, MN 56289	45.318323,-95.275962	https://www.dnr.state.mn.us/state_parks/monson_lake/index.html
-47	Moose Lake State Park	4252 County Road 137 Moose Lake, MN 55767	46.436375,-92.735812	https://www.dnr.state.mn.us/state_parks/moose_lake/index.html
-48	Myre-Big Island State Park	19499 780th Avenue Albert Lea, MN 56007	43.640411,-93.308976	https://www.dnr.state.mn.us/state_parks/myre_big_island/index.html
-49	Nerstrand Big Woods State Park	9700 170th Street East Nerstrand, MN 55053	44.341775,-93.091041	https://www.dnr.state.mn.us/state_parks/nerstrand_big_woods/index.html
-50	Old Mill State Park	33489 240th Avenue Northwest Argyle, MN 56713	48.361407,-96.565575	https://www.dnr.state.mn.us/state_parks/old_mill/index.html
-51	Rice Lake State Park	8485 Rose Street Owatonna, MN 55060	44.095564,-93.063508	https://www.dnr.state.mn.us/state_parks/rice_lake/index.html
-52	St. Croix State Park	30065 St. Croix Park Road Hinckley, MN 55037	46.01201,-92.617885	https://www.dnr.state.mn.us/state_parks/st_croix/index.html
-53	Sakatah Lake State Park	50499 Sakatah Lake State Park Road Waterville, MN 56096	44.217841,-93.532328	https://www.dnr.state.mn.us/state_parks/sakatah_lake/index.html
-54	Savanna Portage State Park	55626 Lake Place McGregor, MN 55760	46.757292,-93.249885	https://www.dnr.state.mn.us/state_parks/savanna_portage/index.html
-55	Scenic State Park	56956 Scenic Highway 7 Bigfork, MN 56628	47.702943,-93.566799	https://www.dnr.state.mn.us/state_parks/scenic/index.html
-56	Schoolcraft State Park		47.222814,-93.806591	https://www.dnr.state.mn.us/state_parks/schoolcraft/index.html
-57	Sibley State Park	800 Sibley Park Road Northeast New London, MN 56273	45.311289,-95.009081	https://www.dnr.state.mn.us/state_parks/sibley/index.html
-58	Split Rock Creek State Park	336 50th Avenue Jasper, MN 56144	43.895953,-96.367169	https://www.dnr.state.mn.us/state_parks/split_rock_creek/index.html
-59	Split Rock Lighthouse State Park	3755 Split Rock Lighthouse Road Two Harbors, MN 55616	47.20565,-91.368248	https://www.dnr.state.mn.us/state_parks/split_rock_lighthouse/index.html
-60	Temperance River State Park	Send mail c/o Tettegouche State Park 5702 Highway 61	47.552663,-90.877469	https://www.dnr.state.mn.us/state_parks/temperance_river/index.html
-61	Tettegouche State Park	5702 Highway 61 Silver Bay, MN 55614	47.339875,-91.196346	https://www.dnr.state.mn.us/state_parks/tettegouche/index.html
-62	Upper Sioux Agency State Park	5908 Highway 67 Granite Falls, MN 56241	44.736979,-95.460501	https://www.dnr.state.mn.us/state_parks/upper_sioux_agency/index.html
-63	Whitewater State Park	19041 Highway 74 Altura, MN 55910	44.062919,-92.043204	https://www.dnr.state.mn.us/state_parks/whitewater/index.html
-64	Wild River State Park	39797 Park Trail Center City, MN 55012	45.524211,-92.754468	https://www.dnr.state.mn.us/state_parks/wild_river/index.html
-65	William O'Brien State Park	16821 O'Brien Trail North Marine on St. Croix, MN 55047	45.225346,-92.763574	https://www.dnr.state.mn.us/state_parks/william_obrien/index.html
-66	Zippel Bay State Park	3684 54th Avenue Northwest Williams, MN 56686	48.844387,-94.850004	https://www.dnr.state.mn.us/state_parks/zippel_bay/index.html
+1	Afton State Park	6959 Peller Avenue South, Hastings, MN 55033	44.847822,-92.797608	https://www.dnr.state.mn.us/state_parks/afton/index.html
+3	Bear Head Lake State Park	9301 Bear Head State Park Road, Ely, MN 55731	47.819641,-92.047706	https://www.dnr.state.mn.us/state_parks/bear_head_lake/index.html
+4	Beaver Creek Valley State Park	15954 County 1, Caledonia, MN 55921	43.645962,-91.555023	https://www.dnr.state.mn.us/state_parks/beaver_creek_valley/index.html
+5	Big Stone Lake State Park	35889 Meadowbrook State Park Road, Ortonville, MN 56278	45.391608,-96.53036	https://www.dnr.state.mn.us/state_parks/big_stone_lake/index.html
+6	Blue Mounds State Park	1410 161st Street, Luverne, MN 56156	43.7177,-96.192638	https://www.dnr.state.mn.us/state_parks/blue_mounds/index.html
+7	Buffalo River State Park	565 155th Street South, Glyndon, MN 56547	46.872839,-96.474624	https://www.dnr.state.mn.us/state_parks/buffalo_river/index.html
+8	Camden State Park	1897 Camden Park Road, Lynd, MN 56157	44.355699,-95.918122	https://www.dnr.state.mn.us/state_parks/camden/index.html
+10	Cascade River State Park	3481 West Highway 61, Lutsen, MN 55612	47.710959,-90.505919	https://www.dnr.state.mn.us/state_parks/cascade_river/index.html
+11	Charles A. Lindbergh State Park	1615 Lindbergh Drive South, Little Falls, MN 56345	45.958857,-94.388152	https://www.dnr.state.mn.us/state_parks/charles_a_lindbergh/index.html
+12	Crow Wing State Park	3124 State Park Road, Brainerd, MN 56401	46.264153,-94.318974	https://www.dnr.state.mn.us/state_parks/crow_wing/index.html
+14	Flandrau State Park	1300 Summit Avenue, New Ulm, MN 56073	44.294231,-94.459411	https://www.dnr.state.mn.us/state_parks/flandrau/index.html
+15	Forestville Mystery Cave State Park	21071 County 118, Preston, MN 55965	43.633664,-92.230635	https://www.dnr.state.mn.us/state_parks/forestville_mystery_cave/index.html
+16	Fort Ridgely State Park	72158 County Road 30, Fairfax, MN 55332	44.447905,-94.726687	https://www.dnr.state.mn.us/state_parks/fort_ridgely/index.html
+17	Fort Snelling State Park	101 Snelling Lake Road, St. Paul, MN 55111	44.871366,-93.195991	https://www.dnr.state.mn.us/state_parks/fort_snelling/index.html
+18	Franz Jevne State Park	State Highway 11, Birchdale, MN 56629	48.641689,-94.058496	https://www.dnr.state.mn.us/state_parks/franz_jevne/index.html
+19	Frontenac State Park	29223 County 28 Boulevard, Frontenac, MN 55026	44.521833,-92.343275	https://www.dnr.state.mn.us/state_parks/frontenac/index.html
+21	Glacial Lakes State Park	25022 County Road 41, Starbuck, MN 56381	45.54167,-95.533468	https://www.dnr.state.mn.us/state_parks/glacial_lakes/index.html
+22	Glendalough State Park	24869 Whitetail Lane, Battle Lake, MN 56515	46.311447,-95.67996	https://www.dnr.state.mn.us/state_parks/glendalough/index.html
+23	Gooseberry Falls State Park	3206 Highway 61 East, Two Harbors, MN 55616	47.13986,-91.47335	https://www.dnr.state.mn.us/state_parks/gooseberry_falls/index.html
+24	Grand Portage State Park	9393 East Highway 61, Grand Portage, MN 55605	47.998931,-89.59363	https://www.dnr.state.mn.us/state_parks/grand_portage/index.html
+25	Great River Bluffs State Park	43605 Kipp Drive, Winona, MN 55987	43.937272,-91.429388	https://www.dnr.state.mn.us/state_parks/great_river_bluffs/index.html
+26	Hayes Lake State Park	48990 County Road 4, Roseau, MN 56751	48.643872,-95.545248	https://www.dnr.state.mn.us/state_parks/hayes_lake/index.html
+29	Itasca State Park	36750 Main Park Drive, Park Rapids, MN 56470	47.250031,-95.212237	https://www.dnr.state.mn.us/state_parks/itasca/index.html
+30	Jay Cooke State Park	780 Highway 210, Carlton, MN 55718	46.661595,-92.399082	https://www.dnr.state.mn.us/state_parks/jay_cooke/index.html
+32	Judge C. R. Magney State Park	4051 East Highway 61, Grand Marais, MN 55604	47.817415,-90.053747	https://www.dnr.state.mn.us/state_parks/judge_cr_magney/index.html
+34	Lac Qui Parle State Park	14047 20th Street Northwest, Watson, MN 56295	45.021109,-95.894069	https://www.dnr.state.mn.us/state_parks/lac_qui_parle/index.html
+35	Lake Bemidji State Park	3401 State Park Road Northeast, Bemidji, MN 56601	47.540636,-94.835799	https://www.dnr.state.mn.us/state_parks/lake_bemidji/index.html
+36	Lake Bronson State Park	3793 230th St, Box 9	48.731464,-96.634675	https://www.dnr.state.mn.us/state_parks/lake_bronson/index.html
+37	Lake Carlos State Park	2601 County Road 38 Northeast, Carlos, MN 56319	46.000442,-95.332947	https://www.dnr.state.mn.us/state_parks/lake_carlos/index.html
+39	Lake Maria State Park	11411 Clementa Avenue Northwest, Monticello, MN 55362	45.317411,-93.931667	https://www.dnr.state.mn.us/state_parks/lake_maria/index.html
+40	Lake Shetek State Park	163 State Park Road, Currie, MN 56123	44.094789,-95.6808	https://www.dnr.state.mn.us/state_parks/lake_shetek/index.html
+42	McCarthy Beach State Park	7622 McCarthy Beach Road, Side Lake, MN 55781	47.6689,-93.031541	https://www.dnr.state.mn.us/state_parks/mccarthy_beach/index.html
+43	Maplewood State Park	39721 Park Entrance Road, Pelican Rapids, MN 56572	46.549975,-95.954175	https://www.dnr.state.mn.us/state_parks/maplewood/index.html
+41	Lake Vermilion-Soudan Underground Mine State Park	1302 McKinley Park Rd, Soudan, MN 55782	47.816696,-92.248857	https://www.dnr.state.mn.us/state_parks/lake_vermilion_soudan/index.html
+2	Banning State Park	61101 Banning Park Rd, Sandstone, MN 55072	46.179636,-92.848759	https://www.dnr.state.mn.us/state_parks/banning/index.html
+9	Carley State Park	50366 County Rd 4, Plainview, MN 55964	44.109915,-92.169425	https://www.dnr.state.mn.us/state_parks/carley/index.html
+13	Father Hennepin State Park	41296 Father Hennepin Park Rd, Isle, MN 56342	46.138048,-93.480541	https://www.dnr.state.mn.us/state_parks/father_hennepin/index.html
+27	Hill-Annex Mine State Park	880 Gary St, Calumet, MN 55716	47.325852,-93.277504	https://www.dnr.state.mn.us/state_parks/hill_annex_mine/index.html
+28	Interstate State Park	307 Milltown Rd, Taylors Falls, MN 55084	45.394917,-92.667836	https://www.dnr.state.mn.us/state_parks/interstate/index.html
+31	John A. Latsch State Park	US-61, Minnesota City, MN 55959	44.172549,-91.838344	https://www.dnr.state.mn.us/state_parks/john_latsch/index.html
+38	Lake Louise State Park	12385 766th Ave, Le Roy, MN 55951	43.535955,-92.509176	https://www.dnr.state.mn.us/state_parks/lake_louise/index.html
+44	Mille Lacs Kathio State Park	15066 Kathio State Park Road, Onamia, MN 56359	46.135411,-93.724473	https://www.dnr.state.mn.us/state_parks/mille_lacs_kathio/index.html
+45	Minneopa State Park	54497 Gadwall Road, Mankato, MN 56001	44.156337,-94.091356	https://www.dnr.state.mn.us/state_parks/minneopa/index.html
+46	Monson Lake State Park	1690 15th Street Northeast, Sunburg, MN 56289	45.318323,-95.275962	https://www.dnr.state.mn.us/state_parks/monson_lake/index.html
+47	Moose Lake State Park	4252 County Road 137, Moose Lake, MN 55767	46.436375,-92.735812	https://www.dnr.state.mn.us/state_parks/moose_lake/index.html
+48	Myre-Big Island State Park	19499 780th Avenue, Albert Lea, MN 56007	43.640411,-93.308976	https://www.dnr.state.mn.us/state_parks/myre_big_island/index.html
+49	Nerstrand Big Woods State Park	9700 170th Street East, Nerstrand, MN 55053	44.341775,-93.091041	https://www.dnr.state.mn.us/state_parks/nerstrand_big_woods/index.html
+50	Old Mill State Park	33489 240th Avenue Northwest, Argyle, MN 56713	48.361407,-96.565575	https://www.dnr.state.mn.us/state_parks/old_mill/index.html
+51	Rice Lake State Park	8485 Rose Street, Owatonna, MN 55060	44.095564,-93.063508	https://www.dnr.state.mn.us/state_parks/rice_lake/index.html
+52	St. Croix State Park	30065 St. Croix Park Road, Hinckley, MN 55037	46.01201,-92.617885	https://www.dnr.state.mn.us/state_parks/st_croix/index.html
+53	Sakatah Lake State Park	50499 Sakatah Lake State Park Road, Waterville, MN 56096	44.217841,-93.532328	https://www.dnr.state.mn.us/state_parks/sakatah_lake/index.html
+54	Savanna Portage State Park	55626 Lake Place, McGregor, MN 55760	46.757292,-93.249885	https://www.dnr.state.mn.us/state_parks/savanna_portage/index.html
+55	Scenic State Park	56956 Scenic Highway 7, Bigfork, MN 56628	47.702943,-93.566799	https://www.dnr.state.mn.us/state_parks/scenic/index.html
+57	Sibley State Park	800 Sibley Park Road Northeast, New London, MN 56273	45.311289,-95.009081	https://www.dnr.state.mn.us/state_parks/sibley/index.html
+58	Split Rock Creek State Park	336 50th Avenue, Jasper, MN 56144	43.895953,-96.367169	https://www.dnr.state.mn.us/state_parks/split_rock_creek/index.html
+59	Split Rock Lighthouse State Park	3755 Split Rock Lighthouse Road, Two Harbors, MN 55616	47.20565,-91.368248	https://www.dnr.state.mn.us/state_parks/split_rock_lighthouse/index.html
+61	Tettegouche State Park	5702 Highway 61, Silver Bay, MN 55614	47.339875,-91.196346	https://www.dnr.state.mn.us/state_parks/tettegouche/index.html
+62	Upper Sioux Agency State Park	5908 Highway 67, Granite Falls, MN 56241	44.736979,-95.460501	https://www.dnr.state.mn.us/state_parks/upper_sioux_agency/index.html
+63	Whitewater State Park	19041 Highway 74, Altura, MN 55910	44.062919,-92.043204	https://www.dnr.state.mn.us/state_parks/whitewater/index.html
+64	Wild River State Park	39797 Park Trail, Center City, MN 55012	45.524211,-92.754468	https://www.dnr.state.mn.us/state_parks/wild_river/index.html
+65	William O'Brien State Park	16821 O'Brien Trail North, Marine on St. Croix, MN 55047	45.225346,-92.763574	https://www.dnr.state.mn.us/state_parks/william_obrien/index.html
+66	Zippel Bay State Park	3684 54th Avenue Northwest, Williams, MN 56686	48.844387,-94.850004	https://www.dnr.state.mn.us/state_parks/zippel_bay/index.html
+33	Kilen Woods State Park	50200 860th Street, Lakefield, MN 56150	43.732178,-95.068799	https://www.dnr.state.mn.us/state_parks/kilen_woods/index.html
+56	Schoolcraft State Park	9042 Schoolcraft Lane NE, Deer River, MN 56636	47.222814,-93.806591	https://www.dnr.state.mn.us/state_parks/schoolcraft/index.html
+20	George H. Crosby Manitou State Park	7616 Co Hwy 7, Finland, MN 55603	47.479452,-91.123011	https://www.dnr.state.mn.us/state_parks/george_crosby_manitou/index.html
+60	Temperance River State Park	7620 West, MN-61, Schroeder, MN 55613	47.552663,-90.877469	https://www.dnr.state.mn.us/state_parks/temperance_river/index.html
 \.
 
 
