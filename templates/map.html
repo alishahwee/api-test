@@ -46,7 +46,8 @@
 				.addTo(map);
 
 			const directions = new MapboxDirections({
-				accessToken: mapboxgl.accessToken
+				accessToken: mapboxgl.accessToken,
+				profile: "mapbox/driving"
 			})
 
 			map.addControl(
