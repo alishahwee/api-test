@@ -20,19 +20,34 @@ def map():
     parks_id = request.args.get("id")
 
     QUERY = """
-    SELECT name, coordinates
+    SELECT name, address, coordinates, url
     FROM parks
     WHERE id = :id
     """
 
-    name, coords = db.session.execute(QUERY, {"id": parks_id}).fetchone()
+    QUERY_2 = """
+    SELECT activity
+    FROM activities
+    WHERE parks_id = :id
+    """
 
-    coords = [float(c) for c in coords.split(",")]
+    name, address, latlng, url = db.session.execute(QUERY, {"id": parks_id}).fetchone()
 
-    coords.reverse()
+    activities = db.session.execute(QUERY_2, {"id": parks_id}).fetchall()
+
+    lnglat = [float(c) for c in latlng.split(",")]
+
+    lnglat.reverse()
 
     return render_template(
-        "map.html", token=os.environ.get("MAPBOX_TOKEN"), name=name, coords=coords
+        "map.html",
+        token=os.environ.get("MAPBOX_TOKEN"),
+        name=name,
+        address=address,
+        lnglat=lnglat,
+        latlng=latlng,
+        url=url,
+        activities=activities,
     )
 
 

@@ -16,10 +16,12 @@
 				padding: 0;
 			}
 			#map {
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				width: 100%;
+				width: 800px;
+				height: 500px;
+			}
+
+			#parks_info {
+				margin: 1em;
 			}
 		</style>
 	</head>
@@ -30,19 +32,32 @@
 			href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
 			type="text/css"
 		/>
+		<div id="parks_info">
+			<h1>{{ name }}</h1>
+			<p>{{ address }}</p>
+			<ul>
+				{% for activity in activities %}
+				<li>{{ activity[0] }}</li>
+				{% endfor %}
+			</ul>
+			<a href="{{ url }}" target="_blank">Redirect to the official DNR page.</a>
+		</div>
 		<div id="map"></div>
+		<div id="weather">
+			<img src="http://wttr.in/{{ latlng }}_p.png">
+		</div>
 		<script>
 			mapboxgl.accessToken = "{{ token }}";
 
 			const map = new mapboxgl.Map({
 				container: 'map',
 			     style: 'mapbox://styles/mapbox/outdoors-v11',
-			     center: {{ coords }}, // starting position [lng, lat]
+			     center: {{ lnglat }}, // starting position [lng, lat]
 			     zoom: 13 // starting zoom
 			});
 
 			const marker = new mapboxgl.Marker()
-				.setLngLat({{ coords }})
+				.setLngLat({{ lnglat }})
 				.addTo(map);
 
 			const directions = new MapboxDirections({
@@ -55,7 +70,7 @@
 				'top-left'
 				);
 
-			directions.setDestination({{ coords }});
+			directions.setDestination({{ lnglat }});
 		</script>
 	</body>
 </html>
